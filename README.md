@@ -47,7 +47,7 @@ This method will initiate purchase for a specific SKU.
   * successCallback - Success callback will get passed data object with **status** and **userData** properties. If **status** property is SUCCESSFUL there will be third property object - **receipt**. Status property value could also be ALREADY_PURCHASED or INVALID_SKU.
   * errorCallback - Will get error message string in case of error.
 
-* **amazonIAP.notifyFullfiled(receiptId, successCallback, errorCallback)**
+* **amazonIAP.notifyFulfilled(receiptId, successCallback, errorCallback)**
 Amazon recommends calling notifyFullfiled for each product that has been fulfilled in your app. Once receive Fulfilled status for the purchase, Amazon will not try to send the purchase receipt to application any more. It's especially important to call this method for CONSUMABLE purchases.
   * receiptId - Receipt id of the product successfully purchased and for which app handled the purchase fulfillment.
   * successCallback - Will get "DONE" string after the notification message get dispatched to Amazon.
